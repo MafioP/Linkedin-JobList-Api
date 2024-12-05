@@ -27,7 +27,7 @@ npm install @atharvh01/linkedin-jobs-api
 
 ```javascript
 import express from 'express';
-import { searchJobs } from '@atharvhatwar/linkedin-jobs-api';
+import { searchJobs } from '@atharvh01/linkedin-jobs-api';
 
 const app = express();
 const PORT = 3000;
