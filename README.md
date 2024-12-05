@@ -122,7 +122,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 **Atharv Hatwar**
-- GitHub: [@atharvhatwar](https://github.com/atharvhatwar)
+- GitHub: [atharvhatwar](https://github.com/atharv01h)
 
 ## Legal Notice
 
