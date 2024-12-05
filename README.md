@@ -20,7 +20,7 @@ Created by: **Atharv Hatwar**
 ## Installation
 
 ```bash
-npm install @atharvhatwar/linkedin-jobs-api
+npm install @atharvh01/linkedin-jobs-api
 ```
 
 ## Quick Start
