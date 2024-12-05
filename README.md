@@ -4,7 +4,7 @@ An unofficial API to fetch job listings from LinkedIn. This API allows you to se
 
 Created by: **Atharv Hatwar**
 
-[![npm version](https://img.shields.io/npm/v/@atharvhatwar/linkedin-jobs-api.svg)](https://www.npmjs.com/package/@atharvhatwar/linkedin-jobs-api)
+[![npm version](https://img.shields.io/npm/v/@atharvh01/linkedin-jobs-api.svg)](https://www.npmjs.com/package/@atharvh01/linkedin-jobs-api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
