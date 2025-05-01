@@ -1,4 +1,5 @@
 import { fetchJobListings } from '../services/linkedinService.js';
+import { formatDateSearchParameter } from '../utils/formatter.js';
 import { validateSearchParams } from '../utils/validator.js';
 
 export async function searchJobs(req, res, next) {
@@ -17,7 +18,7 @@ export async function searchJobs(req, res, next) {
       });
     }
 
-    const jobs = await fetchJobListings(keywords, location, dateSincePosted);
+    const jobs = await fetchJobListings(keywords, location, formatDateSearchParameter(dateSincePosted));
     
     if (!jobs || jobs.length === 0) {
       return res.json({

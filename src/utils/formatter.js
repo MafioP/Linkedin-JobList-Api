@@ -9,6 +9,11 @@ export function formatJobData(jobData) {
   };
 }
 
+//format entry date in days to r<Seconds>
+export function formatDateSearchParameter(date) {
+    return "r" + (date * 60 * 60 * 24);
+}
+
 function cleanUrl(url) {
   if (!url) return '';
   return url.split('?')[0];

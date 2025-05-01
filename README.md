@@ -52,7 +52,7 @@ GET /api/search
 |-----------|------|----------|-------------|
 | keywords | string | Yes | Search terms (e.g., "react developer") |
 | location | string | Yes | Job location (e.g., "remote", "Pune") |
-| dateSincePosted | string | No | Filter by post date (past_24h, past_week, past_month) |
+| dateSincePosted | string | No | Filter by post date (Time in days) |
 
 #### Example Request
 ```bash
