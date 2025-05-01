@@ -1,21 +1,26 @@
 import puppeteer from 'puppeteer';
 import { formatJobData } from '../utils/formatter.js';
+import { getRandomUserAgent } from '../utils/randomizer.js';
+import { autoScroll } from '../utils/pageActions.js';
 
 export async function fetchJobListings(keywords, location, dateSincePosted = '') {
   try {
     const browser = await puppeteer.launch({
-      headless: 'new',
+      headless: false,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+    await page.setUserAgent(getRandomUserAgent());
 
     const searchUrl = constructSearchUrl(keywords, location, dateSincePosted);
     await page.goto(searchUrl, { waitUntil: 'networkidle0' });
 
     // Wait for job listings to load
     await page.waitForSelector('.jobs-search__results-list', { timeout: 5000 });
+
+    //Wait for page to scroll to bottom and load all listings
+    await autoScroll(page);
 
     const jobs = await page.evaluate(() => {
       const jobElements = document.querySelectorAll('.jobs-search__results-list li');
@@ -29,7 +34,7 @@ export async function fetchJobListings(keywords, location, dateSincePosted = '')
       }));
     });
 
-    await browser.close();
+    //await browser.close();
     return jobs.map(job => formatJobData(job));
   } catch (error) {
     console.error('Error fetching jobs:', error);
