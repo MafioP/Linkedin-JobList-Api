@@ -1,4 +1,4 @@
-export async function autoScroll(page, maxScrollAttempts = 20) {
+export async function autoScroll(page, maxScrollAttempts = 30) {
     await page.evaluate(async (maxStuckCount) => {
       await new Promise((resolve) => {
         let stuckCount = 0;

@@ -5,7 +5,6 @@ export function formatJobData(jobData) {
     location: jobData.location,
     link: cleanUrl(jobData.link),
     postedDate: formatDate(jobData.listDate),
-    description: jobData.description
   };
 }
 
