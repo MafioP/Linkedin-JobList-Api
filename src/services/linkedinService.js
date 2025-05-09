@@ -6,7 +6,7 @@ import { autoScroll } from '../utils/pageActions.js';
 export async function fetchJobListings(keywords, location, dateSincePosted = '') {
   try {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: "new",
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
