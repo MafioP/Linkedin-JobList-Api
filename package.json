@@ -41,7 +41,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express-rate-limit": "^7.1.5",
-    "puppeteer": "^21.6.1"
+    "puppeteer": "^24.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
